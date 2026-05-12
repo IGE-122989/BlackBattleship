@@ -41,7 +41,7 @@ Como jogador, quero disparar mísseis no tabuleiro adversário em turnos alterna
 ## US07
 Como jogador, quero que os acertos sejam assinalados com fogo e as falhas com uma salpicadura de água, para perceber visualmente o resultado de cada disparo.
 
-## US08
+## US08 - Carol
 Como jogador, quero poder disparar novamente quando acerto num navio adversário, para ter uma vantagem por precisão.
 
 ## US09
