@@ -162,7 +162,7 @@ Como utilizador registado, quero aceder a uma área de chat geral com a comunida
 
 # Épico 8 — Loja Virtual e Personalização
 
-## US39
+## US39 - CAROL
 Como jogador, quero comprar moedas virtuais na loja, para adquirir itens de personalização (pacotes de 10 000 a 1 500 000 moedas, com descontos progressivos até 34%).
 
 ## US40
