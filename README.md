@@ -304,7 +304,7 @@ Como utilizador, quero juntar-me ao servidor Discord oficial da plataforma, para
 ## US76
 Como utilizador, quero seguir a plataforma nas redes sociais (X, Facebook, YouTube, Instagram), para acompanhar novidades e atualizações.
 
-## US77
+## US77 - CAROL
 Como utilizador, quero consultar o changelog da plataforma, para saber quais as funcionalidades novas e correções de erros introduzidas em cada versão.
 
 ---
