@@ -23,7 +23,7 @@ Informática e Gestão de Empresas
 ## US01
 Como jogador, quero jogar Batalha Naval online contra outro jogador humano numa grelha 10×10, para competir em tempo real com outras pessoas.
 
-## US02
+## US02 - RITA
 Como jogador, quero jogar Batalha Naval contra um robô (bot), para poder praticar sozinho quando não há adversários disponíveis.
 
 ## US03 - CAROL
@@ -76,7 +76,7 @@ Como jogador, quero utilizar um míssil nuclear que causa dano em 14 casas em á
 ## US16
 Como visitante, quero criar uma conta na plataforma, para guardar o meu progresso, histórico de jogos e personalização.
 
-## US17
+## US17 - RITA
 Como visitante, quero jogar como convidado sem criar conta, para experimentar a plataforma sem compromisso.
 
 ## US18
@@ -104,7 +104,7 @@ Como jogador, quero ganhar pontos ao vencer partidas no torneio diário, para su
 ## US24
 Como jogador, quero ser penalizado com -15 pontos se abandonar uma partida em curso, para que o fair play seja incentivado.
 
-## US25
+## US25 - RITA
 Como jogador, quero ver o leaderboard diário com contagem decrescente até ao fim do torneio, para acompanhar a minha posição em tempo real.
 
 ## US26
@@ -311,7 +311,7 @@ Como utilizador, quero consultar o changelog da plataforma, para saber quais as 
 
 # Épico 16 — Privacidade, Segurança e Termos
 
-## US78
+## US78 - RITA
 Como utilizador, quero consultar a política de privacidade da plataforma, para perceber como os meus dados são tratados.
 
 ## US79
