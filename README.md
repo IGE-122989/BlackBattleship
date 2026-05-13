@@ -26,7 +26,7 @@ Como jogador, quero jogar Batalha Naval online contra outro jogador humano numa 
 ## US02
 Como jogador, quero jogar Batalha Naval contra um robô (bot), para poder praticar sozinho quando não há adversários disponíveis.
 
-## US03
+## US03 - CAROL
 Como jogador, quero jogar Batalha Naval com um amigo através de uma ligação partilhada, para jogar com quem eu quiser sem necessidade de registo.
 
 ## US04
