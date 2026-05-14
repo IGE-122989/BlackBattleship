@@ -41,7 +41,7 @@ Como jogador, quero disparar mísseis no tabuleiro adversário em turnos alterna
 ## US07
 Como jogador, quero que os acertos sejam assinalados com fogo e as falhas com uma salpicadura de água, para perceber visualmente o resultado de cada disparo.
 
-## US08 - Carol
+## US08
 Como jogador, quero poder disparar novamente quando acerto num navio adversário, para ter uma vantagem por precisão.
 
 ## US09
@@ -197,7 +197,7 @@ Como subscritor Plus, quero poder cancelar a subscrição de forma autónoma nas
 
 # Épico 10 — Torneios com Gruppo
 
-## US48
+## US48 - CAROL
 Como organizador, quero criar um torneio em menos de 30 segundos, dando-lhe um nome e escolhendo o jogo e o modo, para organizar competições rapidamente.
 
 ## US49
