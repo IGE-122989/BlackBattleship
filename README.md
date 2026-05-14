@@ -322,3 +322,7 @@ Como utilizador, quero que os pagamentos sejam processados de forma segura atrav
 
 ## US81
 Como utilizador, quero que contas com comportamento de batota (cheating) sejam desativadas sem aviso prévio, para garantir a integridade e fair play da plataforma.
+
+
+## Testes de aceitação - IGE-123022
+User stories testadas: US02, US17, US25, US78
