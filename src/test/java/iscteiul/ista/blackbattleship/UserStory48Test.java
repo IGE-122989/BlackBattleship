@@ -118,6 +118,11 @@ public class UserStory48Test {
         tournamentPage.clicarCriarTorneio();
         Thread.sleep(PAUSA_CURTA);
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector("#mat-select-value-serverApp0")
+        ));
+
         tournamentPage.abrirTipoJogo();
         tournamentPage.selecionarBattleship();
 

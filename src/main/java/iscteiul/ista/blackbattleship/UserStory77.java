@@ -1,5 +1,6 @@
 package iscteiul.ista.blackbattleship;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -72,8 +73,7 @@ public class UserStory77 {
      * e data da versão (ex: "5.0.5 (2026-05-10)").
      * Localizador CSS: h2
      */
-    @FindBy(css = "h2")
-    private WebElement primeiraVersao;
+    private final By primeiraVersaoLocator = By.cssSelector("h2");
 
     // -------------------------------------------------------------------------
     // Construtor
@@ -147,7 +147,11 @@ public class UserStory77 {
      *         {@code false} caso contrário
      */
     public boolean existemVersoesListadas() {
-        return primeiraVersao.isDisplayed();
+        return driver.findElement(primeiraVersaoLocator).isDisplayed();
+    }
+
+    public By getPrimeiraVersaoLocator() {
+        return primeiraVersaoLocator;
     }
 
     /**
@@ -166,7 +170,5 @@ public class UserStory77 {
      *
      * @return o WebElement correspondente ao primeiro h2 do Changelog
      */
-    public WebElement getPrimeiraVersao() {
-        return primeiraVersao;
-    }
+
 }

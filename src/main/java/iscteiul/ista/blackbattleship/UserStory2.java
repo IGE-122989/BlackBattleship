@@ -98,4 +98,21 @@ public class UserStory2 {
     public String getUrlAtual() {
         return driver.getCurrentUrl();
     }
+
+    /**
+     * Aceita o banner de cookies da Papergames.io, se estiver visível.
+     */
+    public void aceitarCookies() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement consentButton = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//button[contains(., 'Consent')]")
+            ));
+            consentButton.click();
+            System.out.println("Cookies aceites com sucesso.");
+        } catch (Exception e) {
+            System.out.println("Banner de cookies não apareceu ou já foi fechado.");
+        }
+    }
+
 }

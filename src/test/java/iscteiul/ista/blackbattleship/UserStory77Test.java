@@ -181,8 +181,9 @@ public class UserStory77Test {
 
         // Aguardar o conteúdo
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
-        wait.until(ExpectedConditions.visibilityOf(
-                changelogPage.getPrimeiraVersao()));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                changelogPage.getPrimeiraVersaoLocator()
+        ));
         Thread.sleep(1000);
 
         // Verificar que existem versões listadas
@@ -190,7 +191,8 @@ public class UserStory77Test {
                 "O Changelog deve conter pelo menos uma versão listada");
 
         // Verificar que o texto da primeira versão não está vazio
-        assertFalse(changelogPage.getPrimeiraVersao().getText().isEmpty(),
-                "O texto da primeira versão não deve estar vazio");
+        String texto = driver.findElement(changelogPage.getPrimeiraVersaoLocator()).getText();
+        assertFalse(texto.isEmpty());
+        assertFalse(texto.isEmpty());
     }
 }
