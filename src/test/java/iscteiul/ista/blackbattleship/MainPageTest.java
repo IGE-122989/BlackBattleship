@@ -22,6 +22,16 @@ public class MainPageTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.jetbrains.com/");
 
+        // Aceitar cookies
+        try {
+            WebElement acceptCookies = driver.findElement(
+                    By.cssSelector("button.ch2-btn.ch2-btn-primary"));
+            acceptCookies.click();
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            System.out.println("Banner de cookies não apareceu");
+        }
+
         mainPage = new MainPage(driver);
     }
 
@@ -31,34 +41,53 @@ public class MainPageTest {
     }
 
     @Test
-    public void search() {
+    public void search() throws InterruptedException {
         mainPage.searchButton.click();
 
-        WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
+        Thread.sleep(1000);
+
+        WebElement searchField =
+                driver.findElement(By.cssSelector("[data-test-id='search-input']"));
+
         searchField.sendKeys("Selenium");
 
-        WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
+        Thread.sleep(1000);
+
+        WebElement submitButton =
+                driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
+
         submitButton.click();
 
-        WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
+        Thread.sleep(1000);
+
+        WebElement searchPageField =
+                driver.findElement(By.cssSelector("input[data-test-id='search-input']"));
+
         assertEquals("Selenium", searchPageField.getAttribute("value"));
     }
 
     @Test
-    public void toolsMenu() {
+    public void toolsMenu() throws InterruptedException {
         mainPage.toolsMenu.click();
+
+        Thread.sleep(1000);
 
         WebElement menuPopup = driver.findElement(By.cssSelector("div[data-test='main-submenu']"));
         assertTrue(menuPopup.isDisplayed());
+
+        Thread.sleep(1000);
     }
 
     @Test
-    public void navigationToAllTools() {
-        mainPage.seeDeveloperToolsButton.click();
-        mainPage.findYourToolsButton.click();
+    public void navigationToAllTools() throws InterruptedException {
+        mainPage.toolsMenu.click();
+        Thread.sleep(1000);
 
-        WebElement productsList = driver.findElement(By.id("products-page"));
-        assertTrue(productsList.isDisplayed());
+        mainPage.findYourToolsButton.click();
+        Thread.sleep(2000);
+
+        assertTrue(driver.getCurrentUrl().contains("/products/"));
         assertEquals("All Developer Tools and Products by JetBrains", driver.getTitle());
+
     }
 }

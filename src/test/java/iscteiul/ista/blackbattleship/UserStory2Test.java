@@ -73,6 +73,7 @@ public class UserStory2Test {
     public void testFluxoCompletoPlayVsRobot() throws InterruptedException {
         userStory2Page.clicarPlayVsRobot();
         userStory2Page.preencherNickname("rita");
+        userStory2Page.aceitarCookies();
         userStory2Page.clicarContinue();
         Thread.sleep(2000);
         String urlAtual = userStory2Page.getUrlAtual();
