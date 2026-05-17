@@ -22,6 +22,7 @@ class UserStory4Test {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("--window-size=1920,1080");
+        options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         page = PageFactory.initElements(driver, UserStory4.class);
@@ -34,34 +35,39 @@ class UserStory4Test {
     }
 
     @Test
+    @DisplayName("US04 - Battleship page should load with correct title")
+    void pageTitleIsCorrect() {
+        assertTrue(page.isPageTitleCorrect(),
+                "Error: Page title should contain 'battleship'. Title: "
+                        + driver.getTitle());
+    }
+
+    @Test
     @DisplayName("US04 - Play Online button should be visible on battleship page")
     void playOnlineButtonIsVisible() {
         assertTrue(page.isPlayOnlineButtonVisible(),
                 "Error: 'Play online' button should be visible on the battleship page.");
     }
 
-    // No UserStory4Test.java — substituir o teste que falhou
     @Test
-    @DisplayName("US04 - Clicking Play Online should open game options")
-    void clickPlayOnlineOpensGameOptions() throws InterruptedException {
+    @DisplayName("US04 - Random opponent option should appear after clicking Play Online")
+    void randomOptionAppearsAfterPlayOnline() throws InterruptedException {
         page.clickPlayOnline();
-        Thread.sleep(2000); // aguardar modal aparecer
+        Thread.sleep(2000);
 
-        // Verificar que algo mudou — modal, novo elemento, ou URL diferente
-        boolean urlChanged = !driver.getCurrentUrl().equals("https://papergames.io/en/battleship");
-        boolean modalVisible = page.isGameModalVisible();
-
-        assertTrue(urlChanged || modalVisible,
-                "Error: Clicking 'Play online' should open game options or navigate. URL: "
-                        + driver.getCurrentUrl());
+        assertTrue(page.isRandomOptionVisible(),
+                "Error: 'Play online with a random player' option should be visible.");
     }
 
     @Test
-    @DisplayName("US04 - Page title should contain Battleship")
-    void pageTitleContainsBattleship() {
-        assertTrue(
-                driver.getTitle().toLowerCase().contains("battleship") ||
-                        driver.getTitle().toLowerCase().contains("battle"),
-                "Error: Page title should contain 'battleship'. Title: " + driver.getTitle());
+    @DisplayName("US04 - Clicking Play with random should enter matchmaking or game")
+    void clickRandomEntersMatchmaking() throws InterruptedException {
+        page.clickPlayOnline();
+        Thread.sleep(2000);
+        page.clickPlayRandom();
+
+        assertTrue(page.isInMatchmaking(),
+                "Error: Should enter matchmaking or game room after clicking random. URL: "
+                        + driver.getCurrentUrl());
     }
 }
