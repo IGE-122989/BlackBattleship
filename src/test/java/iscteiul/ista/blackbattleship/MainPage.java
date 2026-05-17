@@ -13,11 +13,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class MainPage {
+    @FindBy(xpath = "//a[@href='/ides/' and @data-test='main-submenu-item-link']")
+    public WebElement seeDeveloperToolsButton;
 
-    private final WebDriver driver;
-    private final WebDriverWait wait;
+    @FindBy(xpath = "//a[@data-test='suggestion-link' and @href='/products/']")
+    public WebElement findYourToolsButton;
 
-    @FindBy(css = "[data-test='site-header-search-action']")
+    @FindBy(xpath = "//button[@data-test='main-menu-item-action' and @aria-label='Products: Open submenu']")
+    public WebElement toolsMenu;
+
+    @FindBy(css = "button[data-test='site-header-search-action']")
     public WebElement searchButton;
 
     public MainPage(WebDriver driver) {

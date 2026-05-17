@@ -1,0 +1,186 @@
+{
+  "id": "adf16a25-8a24-43fe-9d4b-86084e61bf51",
+  "version": "2.0",
+  "name": "TestSuite_123022",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "e2547fe4-c181-483e-a995-af45b8c5ec6b",
+    "name": "UserStoryTest2",
+    "commands": [{
+      "id": "c9e09e55-430a-4597-be1b-8be5b3455d78",
+      "comment": "Abre a página de Batalha Naval",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df8f73ee-fc47-4483-a8a3-b6a346e2393b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x652",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "701e7280-e67b-403e-ad02-06dc2561cf50",
+      "comment": "Clica no botão Play vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ee0301b-e5b6-47f9-982e-300847f2f80d",
+      "comment": "Preenche o nickname com \"rita\"",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "rita"
+    }, {
+      "id": "16c62afc-837a-4e0b-b83c-7d8495ce5d0c",
+      "comment": "Clica em Continue para iniciar o jogo",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "939cf48c-c197-4cdd-925a-841a77bc451e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "57d1851b-6ff0-45df-88fb-2b6d468833df",
+    "name": "UserStoryTest17",
+    "commands": [{
+      "id": "8c46c2ee-605f-4d1c-8e8b-d6cab43e4d1a",
+      "comment": "Abre a página de Batalha Naval",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b3a8cc9-015f-4b01-a9c0-2c61dcce728b",
+      "comment": "Define o tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1050x652",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01981a3b-d936-42ba-9bec-0b67bb63b552",
+      "comment": "Pressiona o botão Play online",
+      "command": "click",
+      "target": "css=.gap-3:nth-child(1) > .d-flex",
+      "targets": [
+        ["css=.gap-3:nth-child(1) > .d-flex", "css:finder"],
+        ["xpath=//span[2]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "53c400cd-c642-4f14-b7a2-8a3ec299f31e",
+    "name": "UserStoryTest25",
+    "commands": [{
+      "id": "32e0af33-3084-4eb3-a952-9dc1f0356f30",
+      "comment": "Abre a página de Batalha Naval",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d00e2d4-e180-481f-9f8c-a5fc372a1950",
+      "comment": "Define o tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1050x652",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7569149-c347-42b0-8a0c-e7a6973a6a2d",
+      "comment": "Faz scroll para o leaderboard",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a083b0c8-8bc1-4c2f-b129-ad35028ae4f3",
+      "comment": "Clica num jogador do leaderboard",
+      "command": "click",
+      "target": "css=app-tournament-leaderboard .item:nth-child(6) .text-truncate",
+      "targets": [
+        ["css=app-tournament-leaderboard .item:nth-child(6) .text-truncate", "css:finder"],
+        ["xpath=//tr[6]/td[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Leeroy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "31005534-8650-4709-b394-379971da60fe",
+    "name": "UserStoryTest78",
+    "commands": [{
+      "id": "1aa425ee-c87e-487d-ba6c-594a057a1743",
+      "comment": "Abre a página de Batalha Naval",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebd3b63e-5602-457a-a423-c037102cd7b4",
+      "comment": "Define o tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1050x652",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "891e033f-4dce-4966-80ce-cee4fc31b873",
+      "comment": "Faz scroll na página",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c52ea8a-711a-4c12-87f3-ab17490c7ca2",
+      "comment": "Clica no link Privacy Policy",
+      "command": "click",
+      "target": "linkText=Privacy",
+      "targets": [
+        ["linkText=Privacy", "linkText"],
+        ["css=.col-md-6:nth-child(3) > div:nth-child(6) > .text-reset", "css:finder"],
+        ["xpath=//a[contains(text(),'Privacy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/blog/privacy-policy')]", "xpath:href"],
+        ["xpath=//div[3]/div[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Privacy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bf0559a9-491d-4cda-82e0-6990fb9d34d5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e2547fe4-c181-483e-a995-af45b8c5ec6b"]
+  }],
+  "urls": [],
+  "plugins": []
+}
