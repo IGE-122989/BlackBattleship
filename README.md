@@ -29,19 +29,19 @@ Como jogador, quero jogar Batalha Naval contra um robô (bot), para poder pratic
 ## US03 - CAROL
 Como jogador, quero jogar Batalha Naval com um amigo através de uma ligação partilhada, para jogar com quem eu quiser sem necessidade de registo.
 
-## US04
+## US04 - FÁBIO
 Como jogador, quero jogar Batalha Naval contra um adversário aleatório online, para encontrar oponentes rapidamente sem ter de convidar ninguém.
 
-## US05
+## US05 
 Como jogador, quero que os navios sejam colocados aleatoriamente na minha grelha no início de cada partida, para que cada jogo seja único e imprevisível.
 
-## US06
+## US06  - FÁBIO
 Como jogador, quero disparar mísseis no tabuleiro adversário em turnos alternados, para tentar afundar a frota inimiga antes que ele afunde a minha.
 
 ## US07
 Como jogador, quero que os acertos sejam assinalados com fogo e as falhas com uma salpicadura de água, para perceber visualmente o resultado de cada disparo.
 
-## US08
+## US08  - FÁBIO
 Como jogador, quero poder disparar novamente quando acerto num navio adversário, para ter uma vantagem por precisão.
 
 ## US09
@@ -54,10 +54,10 @@ Como jogador, quero ser notificado quando vencer ou perder a partida, para saber
 ## US10
 Como jogador, quero que presentes apareçam aleatoriamente no meu tabuleiro durante a partida, para ter a oportunidade de obter armas especiais.
 
-## US11
+## US11  - FÁBIO
 Como jogador, quero poder apanhar um presente ao acertar nele com um míssil, para desbloquear armas especiais durante o jogo.
 
-## US12
+## US12  - FÁBIO
 Como jogador, quero utilizar um míssil simples que causa dano numa única casa, para ataques precisos e cirúrgicos.
 
 ## US13
