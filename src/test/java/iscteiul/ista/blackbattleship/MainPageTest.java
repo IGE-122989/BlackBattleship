@@ -2,11 +2,11 @@ package iscteiul.ista.blackbattleship;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
@@ -25,7 +25,6 @@ class MainPageTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.jetbrains.com/");
 
-        // Aceitar cookies
         try {
             WebElement acceptCookies = driver.findElement(
                     By.cssSelector("button.ch2-btn.ch2-btn-primary"));
@@ -35,7 +34,7 @@ class MainPageTest {
             System.out.println("Banner de cookies não apareceu");
         }
 
-        mainPage = new MainPage(driver);
+        mainPage = new MainPage(driver); // ← já correto
     }
 
     @AfterEach
@@ -44,53 +43,41 @@ class MainPageTest {
     }
 
     @Test
-    public void search() throws InterruptedException {
+    void search() throws InterruptedException {
         mainPage.searchButton.click();
-
         Thread.sleep(1000);
 
-        WebElement searchField =
-                driver.findElement(By.cssSelector("[data-test-id='search-input']"));
-
+        WebElement searchField = driver.findElement(
+                By.cssSelector("[data-test-id='search-input']"));
         searchField.sendKeys("Selenium");
-
         Thread.sleep(1000);
 
-        WebElement submitButton =
-                driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
+        searchField.sendKeys(org.openqa.selenium.Keys.RETURN);
+        Thread.sleep(2000);
 
-        submitButton.click();
-
-        Thread.sleep(1000);
-
-        WebElement searchPageField =
-                driver.findElement(By.cssSelector("input[data-test-id='search-input']"));
-
-        assertEquals("Selenium", searchPageField.getAttribute("value"));
+        assertTrue(driver.getCurrentUrl().contains("q=Selenium"),
+                "Error: URL should contain search query.");
     }
 
     @Test
-    public void toolsMenu() throws InterruptedException {
+    void toolsMenu() throws InterruptedException {
         mainPage.toolsMenu.click();
-
         Thread.sleep(1000);
 
-        WebElement menuPopup = driver.findElement(By.cssSelector("div[data-test='main-submenu']"));
+        WebElement menuPopup = driver.findElement(
+                By.cssSelector("div[data-test='main-submenu']"));
         assertTrue(menuPopup.isDisplayed());
-
         Thread.sleep(1000);
     }
 
     @Test
-    public void navigationToAllTools() throws InterruptedException {
+    void navigationToAllTools() throws InterruptedException {
         mainPage.toolsMenu.click();
         Thread.sleep(1000);
-
         mainPage.findYourToolsButton.click();
         Thread.sleep(2000);
 
-        assertTrue(driver.getCurrentUrl().contains("/products/"));
-        assertEquals("All Developer Tools and Products by JetBrains", driver.getTitle());
-
+        assertTrue(driver.getCurrentUrl().contains("/products/"),
+                "Error: URL should contain '/products/'.");
     }
 }

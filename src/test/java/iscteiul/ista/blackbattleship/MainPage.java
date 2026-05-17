@@ -1,4 +1,3 @@
-// MainPage.java — simplificado
 package iscteiul.ista.blackbattleship;
 
 import org.openqa.selenium.By;
@@ -13,6 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class MainPage {
+
+    // ← CAMPOS QUE FALTAVAM
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+
     @FindBy(xpath = "//a[@href='/ides/' and @data-test='main-submenu-item-link']")
     public WebElement seeDeveloperToolsButton;
 
@@ -44,7 +48,7 @@ public class MainPage {
         WebElement searchField = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.cssSelector("input[type='text']")));
         searchField.sendKeys(query);
-        searchField.sendKeys(Keys.RETURN); // usar RETURN em vez de submit()
+        searchField.sendKeys(Keys.RETURN);
         Thread.sleep(2000);
     }
 
