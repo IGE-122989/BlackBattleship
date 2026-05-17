@@ -1,0 +1,427 @@
+{
+  "id": "b92150e0-08f1-4de7-9f57-b9bff85472d9",
+  "version": "2.0",
+  "name": "TestSuite_112244",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "65318d92-b39c-4a61-9bdb-3def9e47e407",
+    "name": "UserStoryTest4",
+    "commands": [{
+      "id": "a4080bd6-5e0d-4b1c-bd7a-2cfaabcdb319",
+      "comment": "",
+      "command": "open",
+      "target": "/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32023dd3-ef0f-44e6-8b18-8c3e696807a9",
+      "comment": "Alterei tamanho da janela",
+      "command": "setWindowSize",
+      "target": "550x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da781571-4de7-4918-afa6-4fc6df674e6c",
+      "comment": "Carreguei em Play Online with a random player",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//app-juicy-button[4]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5f31e32-965e-45dc-9b87-ecd9d6b0b1a0",
+      "comment": "Adicionei um Nickname",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Fabio"
+    }, {
+      "id": "a97f95a0-b027-48a4-bb91-5c5093fef3cd",
+      "comment": "Carreguei em Continue",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "40e7e2b8-a11c-4e62-8618-f56470f9b895",
+    "name": "UserStoryTest6",
+    "commands": [{
+      "id": "ecda31a3-ffc9-4890-948d-3a3b9e343469",
+      "comment": "Carreguei em Play vs Robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5ce0aa7-8f3e-4993-90b5-a0134994283d",
+      "comment": "Fiz a Minha Jogada e aguardei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e11e96f7-caef-4352-8f0c-2e1c5fb8bf3f",
+      "comment": "Fiz a Minha Jogada e aguardei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f1f3eff-cf61-4fb8-b19f-86910cfde257",
+      "comment": "Fiz a Minha Jogada e aguardei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d6ae0139-1f60-47cf-b3a6-541d8c201e0b",
+    "name": "UserStoryTest8",
+    "commands": [{
+      "id": "131da08e-34b0-43f3-b140-8ada429c85b1",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "597ef54f-74b5-4b24-858b-317c256d53ff",
+      "comment": "Mudei tamanho da Janela",
+      "command": "setWindowSize",
+      "target": "550x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3ffc793-aa71-47a8-84ed-e875965ace77",
+      "comment": "Seleccionei o battleship",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc28d8ae-70e0-4dae-a180-51d917463807",
+      "comment": "Carreguei em play vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0605e4d5-139b-4f3c-aec3-51e4ba9afc80",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "038e24df-1623-4e08-87a7-16deb0b30f33",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeeee1fb-ed22-4b03-948e-849024c1f319",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "74e9c22b-3c3d-4e9b-9d34-6d89c4be8e73",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "69f7049e-2d62-4251-a8fa-8f71a01c78d0",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.fa-question > path",
+      "targets": [
+        ["css=.fa-question > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "853e85a5-9c18-4cbd-b88b-488c02c844a0",
+      "comment": "Fiz a minha jogada, falhei e aguardei",
+      "command": "click",
+      "target": "css=.ng-star-inserted:nth-child(7) > .undefined:nth-child(3) > .intersection",
+      "targets": [
+        ["css=.ng-star-inserted:nth-child(7) > .undefined:nth-child(3) > .intersection", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "050a059a-4b9a-4641-8ff0-4ce3fbb9bff1",
+      "comment": "Fiz a minha jogada, acertei e tive nova oportunidade",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d910fd21-d7be-4e7d-a974-40fe8f051723",
+      "comment": "Joguei novamente",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fa9aad13-f9e2-4501-971f-9d02a88f599e",
+    "name": "UserStoryTest11",
+    "commands": [{
+      "id": "c5320c46-1b7f-4860-9f78-b73e397cd2b5",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fab780d7-bdbd-4cf5-b1f1-c8c9e7169a0e",
+      "comment": "Seleccionei Battleship",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .thumbnail",
+      "targets": [
+        ["css=.game-item:nth-child(1) .thumbnail", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33454eca-54f4-44cf-902e-1375c4c40827",
+      "comment": "Seleccionei Play Online",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//app-juicy-button[4]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eecbde7f-c488-4d26-86a6-5a534d333dd9",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed361af5-6102-46e0-91f0-c46dad4d1ea9",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e83a642-94e1-4713-8ad4-638ba7553135",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd1cc192-48c8-4a54-83ea-2e83ec8259f2",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5e67fd9-2532-4b8b-ab1f-2284955d9eeb",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfbb2b43-2558-41a7-939a-8c0a674da01a",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "606a536f-f5d4-40db-82f0-985a59c6b9c8",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3ce7e49-e6c4-4712-8d82-c8a0f9cc0c0d",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc587087-bceb-4e2b-aad6-7bea2f27dba7",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b82e403-5925-407d-a5ab-8e3c6f5391c4",
+      "comment": "Mandei um missil e acertei",
+      "command": "click",
+      "target": "css=.op:nth-child(3)",
+      "targets": [
+        ["css=.op:nth-child(3)", "css:finder"],
+        ["xpath=//table[@id='board_674f4d0f06f550de1bada64f']/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/app-battleship-board/table/tr/td[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "940649cd-cfda-4b9b-9926-93e8a2c25944",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "37342e43-6121-4912-905d-d65cc14301b7",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "11237c5c-4b09-4d2f-884d-8a00a90d9d6d",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "21529dc8-c9bf-4a20-9d0f-b2d3f8f0b9c0",
+      "comment": "Mandei um missil e falhei",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "79114883-d7d7-4a22-bebb-e3aa1859e6e8",
+      "comment": "Mandei um missil e ganhei um presente",
+      "command": "click",
+      "target": "css=.fa-question > path",
+      "targets": [
+        ["css=.fa-question > path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9b0fc625-e4bd-4635-affc-8dcd0878c05b",
+    "name": "UserStoryTest12",
+    "commands": [{
+      "id": "cf3e2ebb-2988-4634-96e5-f7b88df0780b",
+      "comment": "Seleccionei Battleship",
+      "command": "open",
+      "target": "/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5c18f25-1774-4eba-ad3c-33f82e4432a9",
+      "comment": "Alterei Tamanho da Janela",
+      "command": "setWindowSize",
+      "target": "550x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c089800-221c-403f-88c1-7ddb7c45bc3b",
+      "comment": "Seleccionei Play Online",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//app-juicy-button[4]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aa76665-7f80-47fc-b159-e6be4a121d0e",
+      "comment": "Lancei um missil cirurgico que faz dano a apenas uma casa",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d783c401-0292-47cb-be0f-dd8a194f2b9f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["65318d92-b39c-4a61-9bdb-3def9e47e407"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
