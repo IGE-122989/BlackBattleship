@@ -1,0 +1,542 @@
+{
+  "id": "d2535c4d-6648-4e19-9888-e8f4be0254dd",
+  "version": "2.0",
+  "name": "TestSuite_122989",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "f7cf5ca7-7b10-4c56-955f-5896425278b8",
+    "name": "UserStoryTest3",
+    "commands": [{
+      "id": "715d9724-bc52-4694-a37c-556c06af4618",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26b5dcae-b2d4-4356-ba8c-c0d220f8162b",
+      "comment": "Inicialização da dimensão da janela.",
+      "command": "setWindowSize",
+      "target": "1051x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c8ba703-05ce-43ae-afce-6b5133fd0f50",
+      "comment": "Cliquei em 'Play with a friend'.",
+      "command": "click",
+      "target": "css=.w-100:nth-child(1) > .btn-lg .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(1) > .btn-lg .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "390a4c7f-818c-410a-8a2e-b239b9bdc690",
+      "comment": "Inserir \"TestPlayer\" como nickname",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TestPlayer"
+    }, {
+      "id": "f83541fd-057e-4530-b222-b2f03365e67f",
+      "comment": "Clicar em \"continue\"",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a45afec-725d-49be-986a-23084994b1b1",
+      "comment": "Aguardar que o URL partilhável seja gerado",
+      "command": "waitForElementVisible",
+      "target": "css=.copy-text",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Resign')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "a817aa87-ec2d-40bb-ad44-bf0fc6921055",
+      "comment": "Verificar que a ligação foi criada",
+      "command": "assertElementPresent",
+      "target": "css=.copy-text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "364bf668-8f89-42c4-8ade-85a36bb748ec",
+      "comment": "Cliquei em copiar o URL criado.",
+      "command": "click",
+      "target": "css=.fa-copy",
+      "targets": [
+        ["css=.fa-copy", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dadf99ac-4565-4026-86b3-723708471174",
+    "name": "UserStoryTest77",
+    "commands": [{
+      "id": "6a161d4d-8195-45b0-a088-5afec80a2b2a",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "290116bc-c15a-4de5-9a3f-db9e83b378c4",
+      "comment": "Definir tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1052x799",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "680ccd8f-fe05-4867-9fa2-36c95ff4aaf5",
+      "comment": "Clicar em changelog",
+      "command": "click",
+      "target": "linkText=Changelog",
+      "targets": [
+        ["linkText=Changelog", "linkText"],
+        ["css=.nav:nth-child(7) > .nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Changelog')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/changelog')]", "xpath:href"],
+        ["xpath=//ul[7]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Changelog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "383dc9dc-ea4d-40e7-ad7e-44349a4adce4",
+      "comment": "Aguardar que a página carregue",
+      "command": "waitForElementVisible",
+      "target": "css=h1",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b8f55fb9-225c-4184-9eae-6ef67179bb8a",
+      "comment": "Verificar que o título é \"Changelog\"",
+      "command": "assertText",
+      "target": "id=changelog",
+      "targets": [],
+      "value": "Changelog"
+    }, {
+      "id": "cf5ce8a8-006b-471e-9581-59ad8ff7c59d",
+      "comment": "Verificar que existe pelo menos uma versão listada",
+      "command": "assertElementPresent",
+      "target": "css=h2",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "39434b1f-8aba-4e67-a664-e7b19a8079de",
+    "name": "UserStoryTest39",
+    "commands": [{
+      "id": "3ace039c-787b-411a-99fd-fd6c86217587",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fe47227-0e35-4edd-a454-96634a102110",
+      "comment": "Definir tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1051x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c770e94-629f-4333-8f34-b11acb85a121",
+      "comment": "Clicar em \"Shop\"",
+      "command": "click",
+      "target": "linkText=Shop",
+      "targets": [
+        ["css=.cdk-focused > .hide-if-collapsed", "css:finder"],
+        ["xpath=//ul[2]/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "affa8726-3458-435f-a1d4-c50e4cbafffe",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "e4c3bfb4-576b-4b44-8c8a-e2393630bc28",
+      "comment": "Clicar em \"Coins\"",
+      "command": "click",
+      "target": "css=.box-shadow-1:nth-child(1) .w-75",
+      "targets": [
+        ["css=.box-shadow-1:nth-child(1) .w-75", "css:finder"],
+        ["xpath=//img[@alt='Coins']", "xpath:img"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c95ec255-03e8-43ea-b176-bb87f56a54cf",
+      "comment": "Aguardar que os pacotes carreguem",
+      "command": "waitForElementVisible",
+      "target": "css=app-currency-product",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "54fd4333-0c02-4476-8d4a-fb3f5cc719c9",
+      "comment": "Verificar que os pacotes estão presentes",
+      "command": "assertElementPresent",
+      "target": "css=app-currency-product",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c494cbd-30c2-4913-9268-c178b5a039e8",
+      "comment": "Verificar presença do 1º pacote",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(., \"USD 1\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "063f9016-26af-4487-bcd8-86e167f60fc7",
+      "comment": "Verificar presença do último pacote",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[contains(., \"USD 99\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76c634f1-99e8-40f5-a02b-31d6e60b840b",
+      "comment": "Clicar em \"Get for 1USD\"",
+      "command": "click",
+      "target": "css=app-currency-product:nth-child(1) .btn",
+      "targets": [
+        ["css=app-currency-product:nth-child(1) .btn", "css:finder"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63c3559f-d7df-4891-8732-69f8d7568699",
+      "comment": "Inserir o email",
+      "command": "type",
+      "target": "id=mat-input-serverApp0",
+      "targets": [
+        ["id=mat-input-serverApp0", "id"],
+        ["css=#mat-input-serverApp0", "css:finder"],
+        ["xpath=//input[@id='mat-input-serverApp0']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[2]/mat-form-field/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "cfrla@iscte-iul.pt"
+    }, {
+      "id": "8c0a7096-1292-40f6-879c-6362094602d8",
+      "comment": "Clicar na caixa da password",
+      "command": "click",
+      "target": "css=#mat-mdc-form-field-label-serverApp1 > mat-label",
+      "targets": [
+        ["css=#mat-mdc-form-field-label-serverApp1 > mat-label", "css:finder"],
+        ["xpath=//label[@id='mat-mdc-form-field-label-serverApp1']/mat-label", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/div[2]/label/mat-label", "xpath:position"],
+        ["xpath=//mat-label[contains(.,'Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0799dd3f-35e6-42c7-836c-0174c1595d80",
+      "comment": "Inserir password",
+      "command": "type",
+      "target": "id=mat-input-serverApp1",
+      "targets": [
+        ["id=mat-input-serverApp1", "id"],
+        ["css=#mat-input-serverApp1", "css:finder"],
+        ["xpath=//input[@id='mat-input-serverApp1']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[3]/mat-form-field/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "SeleniumTest"
+    }, {
+      "id": "9f8620f4-80f8-4349-9733-3c8309eb3382",
+      "comment": "Clicar em \"Login\"",
+      "command": "click",
+      "target": "css=.btn-lg:nth-child(2)",
+      "targets": [
+        ["css=.btn-lg:nth-child(2)", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[4]/app-juicy-button/button/span[2]", "xpath:idRelative"],
+        ["xpath=//app-juicy-button/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18286e36-ec14-484e-ab5a-f98f4cb3d263",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.name-credit",
+      "targets": [],
+      "value": "15000"
+    }, {
+      "id": "2970e192-542b-49ed-b8d1-de9238011780",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.name-credit div",
+      "targets": [],
+      "value": "Carol"
+    }, {
+      "id": "0358a15d-00d1-4c6e-b71d-70b8f95bc72d",
+      "comment": "Clicar novamente em \"Get for 1USD\"",
+      "command": "click",
+      "target": "css=app-currency-product:nth-child(1) .btn",
+      "targets": [
+        ["css=app-currency-product:nth-child(1) .btn", "css:finder"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb5d572d-0f37-4293-9de0-14edec330f15",
+      "comment": "Verificar a presença do popup de pagamento",
+      "command": "waitForElementVisible",
+      "target": "css=.xpaystation-widget-lightbox-content-iframe",
+      "targets": [],
+      "value": "15000"
+    }]
+  }, {
+    "id": "83783c34-49cf-46e9-b1df-bda6b1209edd",
+    "name": "UserStoryTest48",
+    "commands": [{
+      "id": "689b1fbc-f476-49c5-9891-b03b9500cd23",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f40283b-1e03-4431-9d96-13e94cc31d33",
+      "comment": "Definir tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1316x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f102ccd-8b19-4356-9802-6e6aeceb5d15",
+      "comment": "Clicar em Login",
+      "command": "click",
+      "target": "css=.btn-outline-dark",
+      "targets": [
+        ["css=.btn-outline-dark", "css:finder"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cd0085a-7ec0-43e2-85b8-aeab4111e7af",
+      "comment": "Inserir email",
+      "command": "type",
+      "target": "id=mat-input-serverApp0",
+      "targets": [
+        ["id=mat-input-serverApp0", "id"],
+        ["css=#mat-input-serverApp0", "css:finder"],
+        ["xpath=//input[@id='mat-input-serverApp0']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[2]/mat-form-field/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "cfrla@iscte-iul.pt"
+    }, {
+      "id": "c1c1a547-9d30-4e66-9145-48f2204ecbdd",
+      "comment": "Selecionar caixa de password",
+      "command": "click",
+      "target": "css=#mat-mdc-form-field-label-serverApp1 > mat-label",
+      "targets": [
+        ["css=#mat-mdc-form-field-label-serverApp1 > mat-label", "css:finder"],
+        ["xpath=//label[@id='mat-mdc-form-field-label-serverApp1']/mat-label", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/div[2]/label/mat-label", "xpath:position"],
+        ["xpath=//mat-label[contains(.,'Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9583fce-01f1-412f-bc90-233249614b93",
+      "comment": "Inserir password",
+      "command": "type",
+      "target": "id=mat-input-serverApp1",
+      "targets": [
+        ["id=mat-input-serverApp1", "id"],
+        ["css=#mat-input-serverApp1", "css:finder"],
+        ["xpath=//input[@id='mat-input-serverApp1']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[3]/mat-form-field/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "SeleniumTest"
+    }, {
+      "id": "f029d82f-e691-4c5e-8b9f-b04426a99228",
+      "comment": "Clicar em Login",
+      "command": "click",
+      "target": "css=.w-100:nth-child(1) > .btn-secondary > .front",
+      "targets": [
+        ["css=.w-100:nth-child(1) > .btn-secondary > .front", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-sign-up-dialog/app-dialog-layout/div/section/div/div/app-sign-up/div/app-login-form/form/div[4]/app-juicy-button/button/span[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/app-juicy-button/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1a4c483-08f0-4117-ae7d-3a6b81997226",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.name-credit",
+      "targets": [],
+      "value": "15000"
+    }, {
+      "id": "8d013052-0429-4c98-9d0b-e48f81215fbf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.name-credit div",
+      "targets": [],
+      "value": "Carol"
+    }, {
+      "id": "de7f6f5d-d870-4299-9072-c9d1f907e766",
+      "comment": "Selecionar \"Criar Torneio\"",
+      "command": "click",
+      "target": "css=.position-relative > .front",
+      "targets": [
+        ["css=.position-relative > .front", "css:finder"],
+        ["xpath=//a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43dd3576-3647-4b3d-9065-b48370a8ef2f",
+      "comment": "Selecionar caixa de tipo de jogo",
+      "command": "click",
+      "target": "css=#mat-select-value-serverApp0 > .mat-mdc-select-placeholder",
+      "targets": [
+        ["css=#mat-select-value-serverApp0 > .mat-mdc-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-serverApp0']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfea6370-9796-4fd7-aa6b-c74c0818ea88",
+      "comment": "Clicar em battleship",
+      "command": "click",
+      "target": "css=#mat-option-serverApp0 .fw-bold",
+      "targets": [
+        ["css=#mat-option-serverApp0 .fw-bold", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-serverApp0']/span/app-game-select-option/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//span/app-game-select-option/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0357f238-09f3-46f1-ba49-532c46796b82",
+      "comment": "Selecionar caixa de nome do torneio",
+      "command": "click",
+      "target": "id=mat-input-serverApp2",
+      "targets": [
+        ["id=mat-input-serverApp2", "id"],
+        ["css=#mat-input-serverApp2", "css:finder"],
+        ["xpath=//input[@id='mat-input-serverApp2']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4aa420e-fa65-4549-bd1a-eb378fb2733c",
+      "comment": "Inserir nome do torneio",
+      "command": "type",
+      "target": "id=mat-input-serverApp2",
+      "targets": [
+        ["id=mat-input-serverApp3", "id"],
+        ["css=#mat-input-serverApp3", "css:finder"],
+        ["xpath=//textarea[@id='mat-input-serverApp3']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Torneio Teste"
+    }, {
+      "id": "8e7147b9-aa7c-46db-b4d1-f039411d350e",
+      "comment": "Selecionar a caixa de descricao do torneio",
+      "command": "click",
+      "target": "id=mat-input-serverApp3",
+      "targets": [
+        ["id=mat-input-serverApp3", "id"],
+        ["css=#mat-input-serverApp3", "css:finder"],
+        ["xpath=//textarea[@id='mat-input-serverApp3']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae7d2de1-2488-4e50-b9a5-e1985c59dcc1",
+      "comment": "Inserir descrição",
+      "command": "type",
+      "target": "id=mat-input-serverApp3",
+      "targets": [
+        ["id=mat-input-serverApp3", "id"],
+        ["css=#mat-input-serverApp3", "css:finder"],
+        ["xpath=//textarea[@id='mat-input-serverApp3']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Teste"
+    }, {
+      "id": "4ca024d3-8cc8-4457-a272-386223e460a3",
+      "comment": "Clicar em create and share",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[9]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create and share')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19f2fce7-7a1c-424d-9935-90722b48d5c6",
+      "comment": "Aguardar que o link seja gerado",
+      "command": "waitForElementVisible",
+      "target": "css=.copy-text",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "dbe22ad8-5570-4486-96c7-c94c2675084a",
+      "comment": "Verificar que o link do torneio foi criado",
+      "command": "assertElementPresent",
+      "target": "css=.copy-text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea15b408-3bb9-4e3e-b675-d062e82ba94a",
+      "comment": "Copiar link",
+      "command": "click",
+      "target": "css=.fa-copy > path",
+      "targets": [
+        ["css=.fa-copy > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bbcb4ed-9328-47fc-9dec-16a1b8aae177",
+      "comment": "Clicar em \"Go to tournment\"",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp1']/div/div/app-url-sharer-dialog/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Go to tournament ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "caa2a1b6-70dc-4c99-a5b3-e0f44aa7f0ed",
+      "comment": "Verificar que a página do torneio abriu",
+      "command": "waitForElementVisible",
+      "target": "css=mat-toolbar h1",
+      "targets": [],
+      "value": "30000"
+    }]
+  }],
+  "suites": [{
+    "id": "d0aa16ec-aba0-4d4a-9e47-e013ab2b2ee0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://papergames.io/en/battleship"],
+  "plugins": []
+}
