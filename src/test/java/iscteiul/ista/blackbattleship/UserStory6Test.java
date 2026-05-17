@@ -5,7 +5,9 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
@@ -35,6 +37,49 @@ class UserStory6Test {
     @AfterEach
     void tearDown() {
         driver.quit();
+    }
+
+    @Test
+    @DisplayName("DEBUG - Print elements after firing a shot")
+    void debugAfterFiring() throws InterruptedException {
+        page.dismissConsentIfPresent();
+        page.clickPlayOnline();
+        Thread.sleep(2000);
+        page.clickPlayVsRobot();
+        Thread.sleep(5000);
+
+        // Tentar clicar numa célula do tabuleiro adversário
+        try {
+            WebElement cell = driver.findElement(
+                    By.xpath("(//app-battleship-board//table//td)[1]"));
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click();", cell);
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.out.println("Erro ao clicar célula: " + e.getMessage());
+        }
+
+        System.out.println("=== APÓS DISPARAR ===");
+        System.out.println("URL: " + driver.getCurrentUrl());
+
+        System.out.println("\n=== SPANS ===");
+        driver.findElements(By.tagName("span")).stream()
+                .filter(s -> { try { String t = s.getText().trim();
+                    return !t.isEmpty() && t.length() < 60; }
+                catch(Exception e) { return false; }})
+                .forEach(s -> { try {
+                    System.out.println("Span: " + s.getText().trim()); }
+                catch(Exception e) {}});
+
+        System.out.println("\n=== DIVS ===");
+        driver.findElements(By.tagName("div")).stream()
+                .filter(d -> { try { String t = d.getText().trim();
+                    return !t.isEmpty() && t.length() < 80 && !t.contains("\n"); }
+                catch(Exception e) { return false; }})
+                .limit(20)
+                .forEach(d -> { try {
+                    System.out.println("Div: " + d.getText().trim()); }
+                catch(Exception e) {}});
     }
 
     @Test
@@ -113,4 +158,6 @@ class UserStory6Test {
         assertTrue(numCells > 0,
                 "Error: Board should have clickable cells for firing. Found: " + numCells);
     }
+
+
 }
