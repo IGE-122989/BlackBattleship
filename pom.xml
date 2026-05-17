@@ -17,11 +17,11 @@
     </properties>
 
     <dependencies>
+        <!-- Selenium sem scope test para estar disponível em src/main/java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
