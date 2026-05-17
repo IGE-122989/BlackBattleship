@@ -106,4 +106,41 @@ class UserStory8Test {
         assertTrue(page.isInGameRoom(),
                 "Error: Game should continue after firing. URL: " + driver.getCurrentUrl());
     }
+
+    @Test
+    @DisplayName("DEBUG - Print elements looking for gifts/presents")
+    void debugGifts() throws InterruptedException {
+        Thread.sleep(3000);
+
+        System.out.println("=== PROCURAR PRESENTES ===");
+        // Procurar elementos com gift, present, bonus
+        driver.findElements(By.xpath(
+                        "//*[contains(@class,'gift') or contains(@class,'present') or " +
+                                "contains(@class,'bonus') or contains(@class,'item')]"))
+                .stream().limit(10)
+                .forEach(e -> { try {
+                    System.out.println("Element: " + e.getTagName() +
+                            " class: " + e.getAttribute("class") +
+                            " text: " + e.getText()); }
+                catch(Exception ex) {}});
+
+        // Disparar várias células e verificar se aparece algum presente
+        for (int i = 0; i < 15; i++) {
+            page.clickBoardCell(i);
+            Thread.sleep(1500);
+
+            // Verificar SVGs ou elementos especiais
+            var gifts = driver.findElements(By.xpath(
+                    "//*[contains(@class,'gift') or contains(@class,'present') or " +
+                            "contains(@class,'bonus') or contains(@class,'treasure')]"));
+            if (!gifts.isEmpty()) {
+                System.out.println("PRESENTE ENCONTRADO na célula " + i);
+                gifts.forEach(g -> { try {
+                    System.out.println("Gift: " + g.getAttribute("outerHTML")
+                            .substring(0, Math.min(100, g.getAttribute("outerHTML").length()))); }
+                catch(Exception ex) {}});
+                break;
+            }
+        }
+    }
 }
