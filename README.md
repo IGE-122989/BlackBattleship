@@ -1,7 +1,10 @@
 # BlackBattleship
 
-## Vídeo de Demonstração
+## Vídeo de Demonstração - Versão Curta
 https://youtu.be/UtH0twDo-0I
+
+## Vídeo de Demonstração - Versão Longa
+https://youtu.be/3TEJSMrW5CQ
 
 ## Grupo: TP06-5
 
